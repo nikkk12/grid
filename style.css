@@ -1,37 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container {
-    display: grid;
+    width: 100%;
+} 
+
+.background {
+    width: 100%;
+}
+.background > img {
+    width: 100%;
+}
+
+.child-one {
+    width: 100%;
+    height: 45vh;
+    position: relative;
+}
+
+.equalizer {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.info {
+    width: 90%;
+    position: absolute;
+    top: 30%;
+    height: 22vh;
+    left: 5%;
+}
+
+.info > h1 {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.45px;
+    color: #191826;
+}
+
+.info > p {
+    font-family: IBM Plex Sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color: #191826;
+}
+
+.child-two {
+    width: 100%;
+}
+
+.balls-bck {
+    width: 100%;
+    position: absolute;
+    top: 70vh;
+    background-color: #191826; 
+    border-radius: 12px;
+}
+
+.balls-bck > img {
+   margin-left: 10%;
+}
+
+.mobile {
+    position: absolute;
+    top: 58vh;
+    left: 20%;
+}
+
+.premium {
+    position: relative;
+    top: 70vh;
+    width: 100%;
+    background-color: #FA7453;
+    border-radius: 12px;
+    height: 65vh; 
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about > h1 {
+    margin-top: 10%;
+    margin-left: 5%;
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0px;
+    color: #FCFAF9;
+}
+
+.about > p {
+    margin-left: 5%;
+    margin-top: 3%;
+    font-family: IBM Plex Sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color: #FCFAF9;
+}
+
+.premium > .dollar {
+    position: absolute;
+    top: 42%;
+    left: 3%;
+    height: 5%;
+    width: 90%;
+}
+
+.premium > .ios {
+    position: absolute;
+    top: 57%;
+    left: 3%;
+}
+
+.premium > .android {
+    position: absolute;
+    top: 79%;
+    left: 3%;
+}
+
+.dollar , .android , .ios {
+    width: 90%;
+}
+
+.premium > .ios  img {
+    width: 95%;
+    height: 90px;
+}
+
+.premium > .android  img {
+    width: 95%; 
+    height: 90px;
+}
+
+.child-three {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 190vh;
+}
+
+.child-three > .equalizer {
+   width: 90%;
+   position: relative;
+   left: 5%;
+} 
+
+.child-three > p {
+    font-family: IBM Plex Sans;
+    font-size: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    color: #191826;
+}
+
+.icons {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+}
+
+button {
+    outline: none;
+    border: none;
+    width: 95%;
+    background-color: #FA7453;
+    cursor: pointer;
+}
+
+.sec-light--bck > img {
     width: 300px;
-    height: 300px;
-    grid-template-columns: 20% 20% 20% 20% 20% ;
-    grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
-.child {
-   
-    text-align: center;
-    /* line-height: 300px; */
-    /* height: 100px; */
-    background-color: tomato;
-    border-radius: 20px;
-    color: #ffffff;
-    font-size: 30px;
+.light-bck-img > img {
+    width: 300px;
 }
 
-.childOne {
-    /* grid-column-start: 1 ;
-    grid-column-end: 5; */
-    grid-row-start: 1;
-    /* grid-row-end: 5; */
-}
-
-@media (width > 700px) {
-   .container {
-    grid-template-columns: repeat(3,1fr);
-   }
-}
-
-@media (width > 1124px) {
+@media (width > 768px) {
     .container {
-        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        background-image: none;
     }
+
+    .equalizer {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+    }
+
+    .child-one {
+        width: 100%;
+    }
+
+    .child-one > .background {
+        position: absolute;
+        width: 230px;
+        height: 96%;
+        background-image: url(./images/bck-balls.svg);
+        right: 0;
+        background-repeat: no-repeat;
+    }
+
+    .info {
+        position: absolute;
+        width: 50%;
+        top: 60%;
+        height: 22vh;
+        left: 10%;
+    }
+
+    .balls-bck {
+        width: 88%;
+        position: absolute;
+        top: 70vh;
+        background-color: #191826; 
+        border-radius: 12px;
+        left: 5%;
+        height: 70vh;
+    }
+
+    .balls-bck > img {
+        position: absolute;
+        left: 30%;
+        top: -10%;
+     }
+
+     .mobile {
+        position: absolute;
+        top: 62vh;
+        left: 21%;
+    }
+    
+    .premium {
+        position: absolute;
+        top: 87vh;
+        width: 40%;
+        background-color: #FA7453;
+        border-radius: 12px;
+        height: 65vh;
+        left: 50%;
+    }
+
+    .child-three {
+        width: 40%;
+        height: 50vh;
+        position: absolute;
+        top: 160vh;
+        
+    }
+    
+    .child-three .info {
+        position: absolute;
+        top: 33%;
+        width: 100%;
+    }
+
+    .child-three .icons {
+        position: absolute;
+        left: 200%;
+        top: 50%;
+    }
+
+    .child-three .equalizer {
+        position: absolute;
+        left: 10%;
+    }
+
+    .bck-ground {
+        position: absolute;
+        width: 384px;
+        height: 384px;
+        left: 0;
+        background-image: url(./images/tablet-orng-bck.svg);
+        background-repeat: no-repeat;
+    }
+
+    .light-bck-img {
+        position: relative;
+        width: 250px;
+        height: 384px;
+        left: 40%;
+        border-radius: 80px;
+    }
+
+    .sec-light--bck {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        width: 384px;
+        height: 384px;
+        border-radius: 80px;
+    }
+}
+
+@media (width > 1024px) {
+    .balls-bck {
+        width: 70%;
+        position: absolute;
+        left: 10%;
+    }
+
+    .premium {
+        position: absolute;
+        width: 27%;
+        left: 48%;
+    }
+
+    .mobile {
+        position: absolute;
+        left: 27%;
+    }
+
+    .premium > .ios > img {
+        position: absolute;
+        left: 0;
+        width: 90%;
+    }
+
+    .premium > .android  img {
+        position: absolute;
+        left: 0;
+        width: 90%;
+    }
+
+    .dollar , .android , .ios {
+        width: 100%;
+    }
+
+    .premium > .dollar > img {
+        width: 60%;
+    }
+
+    .premium > .dollar {
+        position: absolute;
+        top: 45.5%;
+        left: 1%;
+        width: 80%;
+    }
+
+    .child-three .info {
+        position: absolute;
+        top: 14.5%;
+        left: 69%;
+        width: 80%;
+    }
+
+
+    .child-three .icons {
+        position: absolute;
+        left: 200%;
+        top:14.5%;
+    }
+
+    .premium > .android  {
+        position: absolute;
+        left: 5.5%;
+    }
+
+    /* .footer-bck > img {
+        width: 100%;
+    }
+
+    .footer-bck {
+       position: absolute;
+       bottom: 50%;
+       left: 80%;
+    } */
 }
